@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Font */
+  --font-kumbh-sans: "Kumbh Sans", sans-serif;
+  --font-size-12: 12px;
+
+  /* Colors */
+  /* Primary */
+  /* Text */
+  --color-very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --color-soft-red: hsl(14, 88%, 65%);
+
+  /* Gradient */
+  --color-soft-violet: hsl(273, 75%, 66%);
+  --color-soft-blue: hsl(240, 73%, 65%);
+
+  /* Neutral */
+  /* Text */
+  --color-very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --color-dark-grayish-blue: hsl(240, 6%, 50%);
+
+  /* Dividers */
+  --color-light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+body {
+  font-family: var(--font-kumbh-sans);
+  font-size: var(--font-size-12);
+}

@@ -146,6 +146,10 @@ ul {
   color: var(--color-dark-grayish-blue);
 }
 
+.arrow-icon {
+  transition: all 0.2s ease-in-out;
+}
+
 .faq-item.active .faq-item-desc {
   display: block;
 }
@@ -153,6 +157,10 @@ ul {
 .faq-item.active .faq-item-title {
   color: var(--color-very-dark-desaturated-blue);
   font-weight: bold;
+}
+
+.faq-item.active .arrow-icon {
+  transform: rotate(-180deg);
 }
 
 .faq-item:not(.active):hover .faq-item-title,

@@ -28,9 +28,134 @@
 
   /* Dividers */
   --color-light-grayish-blue: hsl(240, 5%, 91%);
+
+  --color-white: hsl(0, 0%, 100%);
 }
 
 body {
   font-family: var(--font-kumbh-sans);
   font-size: var(--font-size-12);
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    var(--color-soft-violet),
+    var(--color-soft-blue)
+  );
+  padding: 1em;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.card-container {
+  width: 870px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: 1.75em;
+}
+
+.card {
+  width: 100%;
+  height: 480px;
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em;
+  border-radius: 1.8em;
+  overflow: hidden;
+}
+
+.illustration {
+  width: 45%;
+  position: relative;
+}
+
+.base-illustration,
+.woman-illustration,
+.box-illustration {
+  position: absolute;
+}
+
+.base-illustration {
+  width: 76em;
+  top: -64%;
+  right: 7%;
+}
+
+.woman-illustration {
+  width: 37em;
+  top: 11.8%;
+  right: 7%;
+}
+
+.box-illustration {
+  width: 15em;
+  top: 40%;
+  right: 89.3%;
+  z-index: 1;
+}
+
+.faq-content {
+  width: 48%;
+  padding: 4em 0;
+}
+
+.title {
+  font-size: 1.9rem;
+  color: var(--color-very-dark-desaturated-blue);
+}
+
+.faq-list {
+  padding: 1.5em 6.5em 1.5em 0;
+}
+
+.faq-item {
+  padding: 1.3em 0;
+  padding-right: 1em;
+  border-bottom: 1px solid var(--color-light-grayish-blue);
+  cursor: pointer;
+}
+
+.faq-item-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.faq-item-title {
+  font-size: 0.825rem;
+  font-weight: 400;
+  color: var(--color-very-dark-grayish-blue);
+  transition: all 0.2s ease-in-out;
+}
+
+.faq-item-desc {
+  display: none;
+  padding-top: 1em;
+  font-size: 0.7rem;
+  line-height: 1.6;
+  color: var(--color-dark-grayish-blue);
+}
+
+.faq-item.active .faq-item-desc {
+  display: block;
+}
+
+.faq-item.active .faq-item-title {
+  color: var(--color-very-dark-desaturated-blue);
+  font-weight: bold;
+}
+
+.faq-item:not(.active):hover .faq-item-title,
+.faq-item:not(.active):focus .faq-item-title {
+  color: var(--color-soft-red);
 }
